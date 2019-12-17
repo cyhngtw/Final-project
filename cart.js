@@ -18,8 +18,8 @@ var items = [{
 // i+=1;
 for(var i =0; i<items.length; i++ ){
 	document.getElementById("items").innerHTML += `
-		  <div class="card col-sm-12 store-item " style="width: 18rem;">
-            <img class="card-img-top" src=${items[i].img} alt="Card image cap">
+		  <div class="card col-md-4 col-sm-12  store-item " ">
+            <img class="card-img-top img-fluid" src=${items[i].img} alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">${items[i].name}</h5>
                 <p class="card-text">${items[i].duration}</p>
@@ -106,39 +106,83 @@ for(let i = 0; i< btns.length ; i+=1){
 	});
 }
 
-function showCartt(){
+function showCartt() {
 	document.getElementById("cartt").innerHTML ="";
-	for(let i = 0; i< cartt.length ; i++){
+	for(let i = 0; i< cartt.length ; i++) {
 		document.getElementById("cartt").innerHTML += `
-			<div class="card mb-3 cart-item " style="max-width: 540px;">
+			<div class="card mb-3 cart-item col-md-4" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src=${cartt[i].img} class="card-img rounded" alt="...">
+                            <img src=${cartt[i].img} class="card-img rounded-circle" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title" id="cart-item-title">${cartt[i].name}</h5>
-                                <p class="card-text cart-item-price"  >${cartt[i].price}</p>
-                                <span class="item-total">${cartt[i].qtty}</span>
+                                <p class="card-text cart-item-price">${cartt[i].price}</p>
+                                <span class="item-qty">${cartt[i].qtty}</span>
                                 <a href="#" id='cart-item-remove' class="cart-item-remove">
                                 <i class="fas fa-trash"></i>
                                  </a>
                             </div>
                         </div>
                     </div>
-                </div> 
-                
-                
-                <div class="cart-total-container d-flex justify-content-around text-capitalize ">
-                    <h5>total</h5>
-                    <h5> &euro; <strong id="cart-total" class="font-weight-bold"></strong> </h5>
-                </div>
-                
-                <div class="cart-buttons-container mt-3 d-flex justify-content-between">
-                    <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
-                    <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
-                </div>
+                </div>       
 		`
+
 	}
+
+    var removebtn = document.getElementsByClassName("cart-item-remove");
+    for(let i = 0; i < removebtn.length; i+=1) {
+        removebtn[i].addEventListener("click", function() {
+            RemoveCartt(cartt[i]);
+        });
+    }
+
+    // function RemoveCartt(){
+    //     var buttonClicked = event.target
+    //     buttonClicked.parentElement.parentElement.parentElement.parentElement.remove()
+    //     updateCartTotal()
+    // }
+
+
+    function RemoveCartt(obj){
+    if(obj.qtty == 0){
+        cartt.remove(obj);
+        obj.qtty--;
+        showCartt();
+        console.log(obj);
+    }else {
+        obj.qtty--;
+        showCartt();
+    }
+}
+    function updateCartTotal() {
+        var cartItemContainer = document.getElementById('cart-info')[0];
+        var cartRows = document.getElementsByClassName('cart-item');
+        var total = 0;
+        var itemCount = 0;
+        
+        for (var i = 0; i < cartRows.length; i++) {
+            var cartRow = cartRows[i]
+            var priceElement = cartRow.getElementsByClassName('cart-item-price')[0]
+            var quantityElement = cartRow.getElementsByClassName('item-qty')[0]
+            var price = parseFloat(priceElement.innerText.replace('&euro', ''))
+            var quantity = quantityElement.innerText
+            total = total + (price * Number(quantity))
+            itemCount += Number(quantity)
+
+        }
+        total = Math.round(total * 100) / 100
+        document.getElementById('cart-total-price').innerText = '€' + total;
+        document.getElementById('item-count').innerText = itemCount;
+    };
+    updateCartTotal()
+
 }
 
+
+
+
+
+
+    

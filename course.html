@@ -24,10 +24,10 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>Course</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="course.html" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>Course</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#one">Full Stack Development</a>
                             <a class="dropdown-item" href="#two">Frontend</a>
@@ -35,26 +35,74 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/event/create"><i class="fas fa-user-friends"></i> About</a>
+                        <a class="nav-link" href="about.html"><i class="fas fa-user-friends"></i> About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/event/create"><i class="far fa-envelope-open"></i> Contact</a>
+                        <a class="nav-link" href="contact.html"><i class="far fa-envelope-open"></i> Contact</a>
                     </li>
                 </ul>
                 <!-- single info -->
                 <div class="nav-info-items d-none d-lg-flex ">
-                    <!-- end of single info -->
-                    <!-- single info -->
-                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
-                        <span class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
-                        <p class="mb-0 text-capitalize"><span id="item-count">2 </span></p>
+                   
+                    <!-- start shop icon info -->
+                    <div id="cart-info" class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                        <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                        <span class="cart-info__icon mr-lg-3 btn" data-toggle="modal" data-target="#modalAbandonedCart"><i class="fas fa-shopping-cart"></i></span>
+                        <p class="mb-0 text-capitalize"><span id="item-count">    </span> </p>
                     </div>
-                    <!-- end of single info -->
+                    </div>
+                    <!-- end of shop icon info -->
                 </div>
             </div> <!-- nav div -->
         </nav> <!-- nav end -->
     </div>
-    <!-- end of single info -->
+    <!-- -- ##### Header Area End #####  -->
+     <!--   shopping cart modal -->
+    <!-- Modal: modalAbandonedCart-->
+<div class="modal fade right" id="modalAbandonedCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+        <div class="row">
+          <div id="cartt">
+              
+          </div>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <!-- cart total -->
+          <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+            <h5>total</h5>
+            <h5> <strong id="cart-total-price" class="font-weight-bold">0</strong> </h5>
+          </div>
+          <!--end cart total -->
+          <div>
+              <a type="button" class="btn btn-info">check out</a>
+          </div>
+        
+        
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Modal: modalAbandonedCart-->
+    <!--end of  shopping cart -->
+
     <!-- filter start -->
     <div class="container my-5 py-4 d-flex justify-content-around rounded bg-light">
         <!-- flexitem1-->
@@ -214,17 +262,24 @@
         </div> <!-- flexitem3 -->
     </div>
     <!-- filter end -->
-    <hr>
-    <h5>shopping cart</h5>
-    <!-- cart  -->
-    <div id="cartt" >
-        why am I not showing anything?
-    </div>
-    <!--end of  cart -->
-    <!-- card container start -->
-    <div class="container d-flex justify-content-between my-5 pt-5 store-items" id="items" height="400px">
+
+ 
+
+
+    <!-- course container start -->
+    <div class="container  my-5 pt-5 store-items" >
+        <div class="row">
+           <div id="items">
+               
+           </div>
+                
+            </div>
+        </div>
         
-    </div><!--  card container end -->
+    </div><!--  course container end -->
+
+
+
     <footer>
         <ul class="list-inline icon text-center bg-danger p-2 ">
             <li class="list-inline-item"><a href="#" class="text-white" class="text-white">AGB</a></li>
