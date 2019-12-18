@@ -110,17 +110,19 @@ function showCartt() {
 	document.getElementById("cartt").innerHTML ="";
 	for(let i = 0; i< cartt.length ; i++) {
 		document.getElementById("cartt").innerHTML += `
-			<div class="card mb-3 cart-item col-md-4" style="max-width: 540px;">
+			<div class="card border-white mb-3 cart-item col-md-4" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <img src=${cartt[i].img} class="card-img rounded-circle" alt="...">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body">
+                            <div class="card-body d-flex justify-content-between">
                                 <h5 class="card-title" id="cart-item-title">${cartt[i].name}</h5>
-                                <p class="card-text cart-item-price">${cartt[i].price}</p>
-                                <span class="item-qty">${cartt[i].qtty}</span>
-                                <a href="#" id='cart-item-remove' class="cart-item-remove">
+                                 <span>&euro;</span>
+                                 <p class="card-text cart-item-price">${cartt[i].price}</p>
+                                 
+                                <p class="item-qty">${cartt[i].qtty}</p>
+                                <a href="#" id='cart-item-remove' class="cart-item-remove text-danger">
                                 <i class="fas fa-trash"></i>
                                  </a>
                             </div>
@@ -128,13 +130,13 @@ function showCartt() {
                     </div>
                 </div>       
 		`
-
+//      document.getElementsByClassName('cart-item-remove')[0].addEventListener('click', RemoveCartt)
 	}
 
     var removebtn = document.getElementsByClassName("cart-item-remove");
     for(let i = 0; i < removebtn.length; i+=1) {
         removebtn[i].addEventListener("click", function() {
-            RemoveCartt(cartt[i]);
+            RemoveCartt(cartt[i],i);
         });
     }
 
@@ -145,12 +147,14 @@ function showCartt() {
     // }
 
 
-    function RemoveCartt(obj){
-    if(obj.qtty == 0){
-        cartt.remove(obj);
-        obj.qtty--;
-        showCartt();
-        console.log(obj);
+    function RemoveCartt(obj,i){
+    if(obj.qtty == 1){
+        var buttonClicked = event.target
+        obj.qtty --;
+        cartt.splice(i,1);
+        buttonClicked.parentNode.parentNode.parentNode.parentNode.parentNode.remove()
+        console.table(cartt);
+        showCartt()
     }else {
         obj.qtty--;
         showCartt();
@@ -168,12 +172,15 @@ function showCartt() {
             var quantityElement = cartRow.getElementsByClassName('item-qty')[0]
             var price = parseFloat(priceElement.innerText.replace('&euro', ''))
             var quantity = quantityElement.innerText
+            // if (qantity) {
+            //     RemoveCartt()
+            // }
             total = total + (price * Number(quantity))
             itemCount += Number(quantity)
 
         }
         total = Math.round(total * 100) / 100
-        document.getElementById('cart-total-price').innerText = '€' + total;
+        document.getElementById('cart-total-price').innerText = ' € ' + total;
         document.getElementById('item-count').innerText = itemCount;
     };
     updateCartTotal()

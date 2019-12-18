@@ -59,18 +59,20 @@
     <!-- -- ##### Header Area End #####  -->
      <!--   shopping cart modal -->
     <!-- Modal: modalAbandonedCart-->
-<div class="modal fade right" id="modalAbandonedCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade right " id="modalAbandonedCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
     <!--Content-->
-    <div class="modal-content">
+    <div class="modal-content slogen-bg ">
       <!--Header-->
-      <div class="modal-header">
+      <div class="modal-header ">
         
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="white-text">&times;</span>
         </button>
       </div>
+  
+
 
       <!--Body-->
       <div class="modal-body">
@@ -83,16 +85,21 @@
       </div>
 
       <!--Footer-->
-      <div class="modal-footer justify-content-center">
+      <div class="modal-footer d-flex flex-column align-items-center">
         <!-- cart total -->
-          <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
-            <h5>total</h5>
-            <h5> <strong id="cart-total-price" class="font-weight-bold">0</strong> </h5>
+          <div class="cart-total-container mt-5">
+            <h5 class="text-white text-center display-4">Total<strong id="cart-total-price" class="font-weight-bold text-white">0</strong></h5>
+
+
+
+            
+            
+            
           </div>
           <!--end cart total -->
-          <div>
-              <a type="button" class="btn btn-info">check out</a>
-          </div>
+          <div class="p-3 justify-content-center" width="200px" >
+                <a type="button" class="btn btn-secondary text-white p-2"><h4 class="text-center">check out</h4></a>
+            </div>
         
         
       </div>
