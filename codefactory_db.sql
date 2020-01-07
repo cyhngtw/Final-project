@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 13, 2019 at 10:56 AM
+-- Generation Time: Dec 19, 2019 at 07:19 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -41,15 +41,15 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `title`, `image`, `description`, `active`) VALUES
-(1, 'Frontend Developer', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
-(2, 'Full Stack Web Developer', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
-(3, 'Backend Developer', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
-(4, 'BIM Factory', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
-(5, 'Basic Course JavaScript', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
-(6, 'Basic Course HTML/CSS', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
-(7, 'Python Programming', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
-(8, 'Java Developer', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
-(9, 'UX Design for Coders', '', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1);
+(1, 'Frontend Developer', '../img/01-frontend.jpg', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
+(2, 'Full Stack Web Developer', '../img/02-fullstack.jpg', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
+(3, 'Backend Developer', '../img/03-backend.jpg', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
+(4, 'BIM Factory', '../img/04-bim-factory.png', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
+(5, 'Basic Course JavaScript', '../img/05-js.jpg', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
+(6, 'Basic Course HTML/CSS', '../img/06-htmlcss.jpg', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
+(7, 'Python Programming', '../img/07-python.jpg', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
+(8, 'Java Developer', '../img/08-java.png', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1),
+(9, 'UX Design for Coders', '../img/09-ux.jpg', 'Quis sint consectetur et sunt consequat eiusmod pariatur in eiusmod et quis non. Ut duis proident consectetur amet cupidatat velit proident ea dolor ut dolor in.', 1);
 
 -- --------------------------------------------------------
 
@@ -272,6 +272,13 @@ CREATE TABLE `users` (
   `user_role` enum('user','admin') DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_email`, `user_password`, `user_role`) VALUES
+(1, 'chris@admin.com', '96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e', 'admin');
+
 -- --------------------------------------------------------
 
 --
@@ -377,7 +384,7 @@ ALTER TABLE `tag_categories`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users_course_items`

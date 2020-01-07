@@ -13,9 +13,9 @@ $result = $crudcontroller->showCourses();
 
 ?>
 
-<a href="logout.php?logout"><button type="button" class="btn btn-success border">Log Out</button></a>
 
 <div class="container-fluid">
+    <a href="logout.php?logout"><button type="button" class="btn btn-outline-success border m-2">Log Out</button></a>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@ $result = $crudcontroller->showCourses();
           ?>
 
       <tr>
-        <td><img src="<?php echo $result[$k]["image"]; ?>" alt=""></td>
+        <td><img src="<?php echo $result[$k]["image"]; ?>" alt="" height="50"></td>
         <td><?php echo $result[$k]["course_id"]; ?></td>
         <td><?php echo $result[$k]["title"]; ?></td>
         <td><?php echo $result[$k]["description"]; ?></td>
@@ -81,6 +81,23 @@ $result = $crudcontroller->showCourses();
   </div>
 </div>
 
-<?php
-include_once "../Components/footer.php";
-?>
+<!-- JQuery<--->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--popper.js--->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<!--bootstrap.js--->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<!---JS--->
+<script type="text/javascript" src="../JS/crudEvent.js"></script>
+<script type="text/javascript" src="../JS/filterDropdown.js"></script>
+<script type="text/javascript" src="../JS/cart.js"></script>
+<script type="text/javascript" src="../JS/check_out_2.js"></script>
+<!-- <script type="text/javascript" src="../JS/cart.js"></script> -->
+</body>
+
+</html>

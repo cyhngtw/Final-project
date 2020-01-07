@@ -4,7 +4,7 @@
         our Graduates work at
 
     </div>
-    <div class="h5 mx-auto w-100">
+    <div class="h5 mx-auto">
             <!--  IBM, XXLutz, ABC, CDE, FGH, LLL, HHH -->
         <ul class="list-inline icon text-center p-2 mx-auto  d-flex justify-content-around ">
             <li class="list-inline-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" height="30px" width="40px" alt=""></li>
@@ -16,22 +16,18 @@
             <li class="list-inline-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Sportradar_logo.png" height="30px" width="80px" alt=""></i></li>
         </ul>
     </div>
-
-    <div class="d-flex justify-content-around slogen-bg  text-white m-2 w-100">
-        <div><span>
-                <h3>+1000</h3>
-            </span>
-            <h3>Graduated<br>Students</h3>
+    <div class="d-flex justify-content-around slogen-bg text-white text-center">
+        <div>
+            <h3 class="writing_graduate">+1000</h3>
+            <h3 class="writing_graduate">Graduated<br>Students</h3>
         </div>
-        <div><span>
-                <h3>+100</h3>
-            </span>
-            <h3>Partner<br>Companies</h3>
+        <div>
+            <h3 class="writing_graduate">+100</h3>
+            <h3 class="writing_graduate">Partner<br>Companies</h3>
         </div>
-        <div><span>
-                <h3>+50 </h3>
-            </span>
-            <h3>Students<br>Nationalities</h3>
+        <div>
+            <h3 class="writing_graduate">+50</h3>
+            <h3 class="writing_graduate">Students<br>Nationalities</h3>
         </div>
     </div>
 </div>
@@ -42,17 +38,16 @@
 
         <!-- card1 start -->
         <div class="card mb-3 border-0" style="max-width: 540px;">
-            <div class="row ">
+            <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="https://cdn.pixabay.com/photo/2016/04/16/04/33/student-1332508_960_720.jpg" class="card-img rounded-circle" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Student</h5>
-                        <p class="card-text">I am civil engineer graduate but I am more interested in computer science, which motivate me more to work in this field. now I am working as intern in a video game company.I did full stack course. This was my couse.</p>
-
+                        <p class="card-text">After graduating from university as a civil engineer I was not happy due to the fact that I was more interested in computer science, which motivated me so much to work in this field. Now after finishing my Full-Stack-Development course I am working as intern in a video game company and with that I fulfilled my dream.</p>
+                        <a class="btn  btn-outline-danger" href="our-courses.php" role="button">check my course</a>
                     </div>
-                    <a class="btn  btn-outline-danger" href="course.html" role="button">check my course</a>
                 </div>
             </div>
         </div>
@@ -65,10 +60,9 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Marketing officer</h5>
-                        <p class="card-text">After years of working in Marketing department, would like to seek career change as I have carried out numerous project on website development, plus the intensive course in Codefactory increase immersively my knowledge about coding, now I love my job as Junior web devloper. Please refer to the course I did.</p>
-
+                        <p class="card-text">After years of working in an Marketing department, I had simply got a Burnout and wanted to change my life. The intensive course in Codefactory increased immersively my knowledge about coding, now I love my job as Junior web devloper. Please refer to the course I did.</p>
+                        <a class="btn  btn-outline-danger" href="our-courses.php" role="button">check my course</a>
                     </div>
-                    <a class="btn  btn-outline-danger" href="course.html" role="button">check my course</a>
                 </div>
             </div>
         </div>
@@ -81,10 +75,10 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Head of Sales Department</h5>
-                        <p class="card-text">Due to economic crisis in my previous company, I have been laid off by company, I would like to seek a job change and get a good paid to maintain my family. Now I am working in a IT software company to be a marketing manger to carry out project. You wanna see what I did.</p>
+                        <h5 class="card-title">Head of Sales</h5>
+                        <p class="card-text">Due to a crisis in my previous company, I had to change my life completly. After a couple of week I decided to invest into my future and started at CodeFactory. Now I am working in an IT software company as a project-manager. Would you like to see which course I attended?</p>
+                        <a class="btn  btn-outline-danger" href="our-courses.php" role="button">check my course</a>
                     </div>
-                    <a class="btn  btn-outline-danger" href="course.html" role="button">check my course</a>
                 </div>
             </div>
         </div>
@@ -98,9 +92,9 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Junior Developer</h5>
-                        <p class="card-text">Working a couple of years in webdevelopement and would like to advance backend expertise in order to gain better salary and career position. Now I am working as senior project manager in ABC company. Have a look what I attended.</p>
+                        <p class="card-text">Working a couple of years in front-end webdevelopement I decided to invest in my backend expertise in order to gain a better salary and career position. Now I am working as senior project manager in ABC company. Take a look which course I attended.</p>
+                        <a class="btn  btn-outline-danger" href="our-courses.php" role="button">check my course</a>
                     </div>
-                    <a class="btn  btn-outline-danger" href="course.html" role="button">check my course</a>
                 </div>
             </div>
         </div>

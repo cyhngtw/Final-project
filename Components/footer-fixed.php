@@ -1,4 +1,4 @@
-<footer class="">
+<footer class="fixed-bottom">
     <ul class="list-inline icon text-center bg-danger p-2 m-0 h-100">
         <li class="list-inline-item"><a href="#" class="text-white" class="text-white">AGB</a></li>
         <li class="list-inline-item"><a href="#" class="text-white">Datenschutz</a></li>

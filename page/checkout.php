@@ -74,7 +74,7 @@ include_once "../Components/navbar.php";
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-12">
-                        	<button class="col-md-12 btn btn-pay placeicon" onclick="printPDF()" type="button">PAY 100 EURO NOW</button>
+                            <button class="col-md-12 btn btn-pay placeicon" onclick="printPDF()" type="button"><p id="sum" class="text-white m-0">PAY NOW</p></button>
                         </div>
                     </div>
                 </form>
@@ -82,6 +82,12 @@ include_once "../Components/navbar.php";
         </div>
     </div>
 </div>
+
+<!-- <script type="text/javascript" src="./../JS/cart.js"></script>
+<script>
+    document.getElementById("sum").innerHTML = total;
+</script> -->
+
 <?php
 include_once "../Components/footer.php";
 ?>

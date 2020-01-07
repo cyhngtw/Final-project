@@ -1,3 +1,4 @@
+<h3 class="text-center mt-5">Choose your Course</h3>
 <div class="row mt-5 p-5 bg-light">
     <div class="container col-4 text-center">
         <div class="row">

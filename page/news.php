@@ -6,7 +6,7 @@ include_once "../Components/head.php";
 include_once "../Components/navbar.php";
 // include_once "../Components/header.php";
 ?>
-<div class="container">
+<div class="container my-5">
     <div class="row">
         <div class="col-lg-12">
             <h1 id="heading_1" class="text-center">

@@ -1,6 +1,6 @@
 var items = [{
 	name:"Javascript",
-	img: "img/js.jpg",
+	img: "../img/js.jpg",
 	price: 450,
 	duration:"Part-time",
 	date:"15/03/2020",
@@ -8,77 +8,83 @@ var items = [{
 	qtty: 0
 },{
 	name:"Python",
-	img: "img/py.jpg",
+	img: "../img/py.jpg",
 	price:250,
 	date:"",
 	description:"Dieser Kurs lehrt, was die grundlegendsten Programmierkonzepte in JavaScript sind und wie man sie benutzt. Sie lernen Datenarten, Funktionen, Schleifen, Kontrollfluss und Objekte kennen.",
 	duration:"Part-time",
 	qtty:0
+},{
+    name:"Frontend",
+    img: "../img/01-frontend.jpg",
+    price:2490,
+    date:"",
+    description:"Dieser Kurs lehrt, was die grundlegendsten Programmierkonzepte im Frontend sind und wie man sie benutzt. Sie lernen Datenarten, Funktionen, Schleifen, Kontrollfluss und Objekte kennen.",
+    duration:"Full-time",
+    qtty:0
 }];
+
 // i+=1;
-for(var i =0; i<items.length; i++ ){
-	document.getElementById("items").innerHTML += `
-		  <div class="card col-md-4 col-sm-12  store-item " ">
-            <img class="card-img-top img-fluid" src=${items[i].img} alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">${items[i].name}</h5>
-                <p class="card-text">${items[i].duration}</p>
-                <p class="card-text">&euro;${items[i].price}</p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <select class="md-form mdb-select colorful-select dropdown-primary">
-                            <option value="" disabled selected>Choose your section</option>
-                            <option value="1">14/01/2020-30/04/2020</option>
-                            <option value="2">14/02/2020-30/05/2020</option>
-                        </select>
-                    </div>
-                </div> 
-                
-                <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#modalQuickView${i}">
-                    Details
-                </button>
-                <button type="button" class="btn btn-danger bbtn mt-2 store-item-icon">
-                    Apply now
-                </button> 
-               
-              <div class="modal fade " id="modalQuickView${i}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
-                    <div class="modal-dialog modal-lg" role="document">
-                       
-                      <div class="modal-content">
-                         <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <img src=${items[i].img} class="img-fluid" alt="">
-                                    </div>
-                                    <div class="col-7">
-                                        <p><strong>${items[i].name} </strong></p>
-                                        <h4 class="h4-responsive">
-                                            <span>
-                                                <strong>&euro;${items[i].price}</strong>
-                                            </span>
-                                            <span>
-                                                <small>
-                                                    <s>&euro;500</s>
-                                                </small>
-                                            </span>
-                                        </h4>
-                                        <p>${items[i].description}</p>
-                                        <label>ALL tags here</label>
-                                        <div class="mt-2">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
+if(document.getElementById("items")) {
+    for(var i =0; i<items.length; i++ ){
+    	document.getElementById("items").innerHTML += `
+              <div class="card col-md-4 col-sm-12 p-4 border-0 store-item " ">
+                <div class="shadow">
+                    <img class="card-img-top img-fluid" src=${items[i].img} alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">${items[i].name}</h4>
+                        <p class="card-text">${items[i].duration}</p>
+                        <p class="card-text">&euro;${items[i].price}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="md-form mdb-select colorful-select dropdown-primary">
+                                    <option value="" disabled selected>Choose your section</option>
+                                    <option value="1">14/01/2020-30/04/2020</option>
+                                    <option value="2">14/02/2020-30/05/2020</option>
+                                </select>
                             </div>
                         </div> 
-                       
-                     </div>
-                </div>  
-                
-           </div>
-           </div>
-	`;
-	//"<p>"+items[i].name+"</p>"
+                        
+                        <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#modalQuickView${i}">
+                            Details
+                        </button>
+                        <button type="button" class="btn btn-danger bbtn mt-2 store-item-icon">
+                            Buy now
+                        </button> 
+                    
+                    <div class="modal fade " id="modalQuickView${i}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+                            <div class="modal-dialog modal-lg" role="document">
+                            
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <img src=${items[i].img} class="img-fluid" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <p><strong>${items[i].name} </strong></p>
+                                                <h4 class="h4-responsive">
+                                                    <span>
+                                                        <strong>&euro;${items[i].price}</strong>
+                                                    </span>
+                                                </h4>
+                                                <p>${items[i].description}</p>
+                                                <div class="mt-2">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+               </div>
+    	`;
+    	//"<p>"+items[i].name+"</p>"
+    }
 }
 
 var cartt = [];
@@ -110,14 +116,14 @@ function showCartt() {
 	document.getElementById("cartt").innerHTML ="";
 	for(let i = 0; i< cartt.length ; i++) {
 		document.getElementById("cartt").innerHTML += `
-			<div class="card border-white mb-3 cart-item col-md-4" style="max-width: 540px;">
+			<div class="card border-white mb-3 p-4 cart-item col-md-4" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <img src=${cartt[i].img} class="card-img rounded-circle" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body d-flex justify-content-between">
-                                <h5 class="card-title" id="cart-item-title">${cartt[i].name}</h5>
+                                <h4 class="card-title" id="cart-item-title">${cartt[i].name}</h4>
                                  <span>&euro;</span>
                                  <p class="card-text cart-item-price">${cartt[i].price}</p>
                                  
@@ -180,16 +186,21 @@ function showCartt() {
 
         }
         total = Math.round(total * 100) / 100
+        console.log(total);
         document.getElementById('cart-total-price').innerText = ' € ' + total;
         document.getElementById('item-count').innerText = itemCount;
-    };
-    updateCartTotal()
-
-}
-
-
-
-
-
-
+        // document.getElementById("btnCheckout").addEventListener("click", displaySum);
     
+        // function displaySum() {
+        //     document.getElementById("sum").innerHTML += total;
+        //     alert(total);
+        // };
+    };
+    updateCartTotal();
+    
+};
+
+
+
+
+

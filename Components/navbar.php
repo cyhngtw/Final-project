@@ -6,7 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.php"><i class="fas fa-home mr-1"></i>Home</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -21,19 +21,33 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php"><i class="far fa-envelope-open mr-1"></i>Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.php"><i class="fas fa-store mr-1"></i>Shop</a>
+                </li>
             </ul>
-            <ul class="navbar-nav ml-auto ">
+            <!-- <ul class="navbar-nav ml-auto ">
                 <li class="nav-item">
                     <a class="nav-link ">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </li>
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link ">
                         <i class="fas fa-user"></i>
                     </a>
-                </li> -->
-            </ul>
-        </div>
-    </nav>
+                </li>
+            </ul> -->
+            <!-- single info -->
+            <div class="nav-info-items d-none d-lg-flex ">
+                <!-- start shop icon info -->
+                <div id="cart-info" class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                        <span class="cart-info__icon mr-lg-3 btn" data-toggle="modal" data-target="#modalAbandonedCart"><i class="fas fa-shopping-cart"></i></span>
+                        <p class="mb-0 text-capitalize"><span id="item-count"> </span> </p>
+                    </div>
+                </div>
+                <!-- end of shop icon info -->
+            </div>
+        </div> <!-- nav div -->
+    </nav> <!-- nav end -->
 </div>

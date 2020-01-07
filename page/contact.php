@@ -5,7 +5,7 @@ include_once "../Components/head.php";
 include_once "../Components/navbar.php";
 // include_once "../Components/header.php";
 ?>
-<div class="container h-100">
+<div class="container h-100 my-5 py-2 contactContainer">
     <div class="row">
         <div class="col-10 offset-1">
             <div class="col-md-8 offset-md-2">
@@ -52,5 +52,5 @@ include_once "../Components/navbar.php";
     </div>
 </div>
 <?php
-include_once "../Components/footer.php";
+include_once "../Components/footer-fixed.php";
 ?>

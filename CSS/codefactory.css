@@ -12,8 +12,8 @@ background-color:#c72c41 ;
 }
 
 .slogen-bg{
-
 background-color: #801336;
+/* background-color: lightgrey; */
 }
 
 /* /* cart  */
@@ -57,4 +57,6 @@ background-color: #801336;
 .cart-info:hover .cart-info__icon {
   color: var(--mainWhite);
 }
+
+
 /* end of info icons */

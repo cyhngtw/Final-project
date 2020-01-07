@@ -16,15 +16,15 @@
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2014/12/16/22/25/youth-570881_960_720.jpg" alt="First slide">
                             <div class="carousel-caption d-md-block">
-                                <h5>INCREASE YOUR SALARY NOW!</h5>
-                                <p class="text_carousel">Our graduates from Full-Stack-Course start with an average salary of 40k per year.</p>
+                                <h5>INCREASE YOUR SALARY!</h5>
+                                <p class="text_carousel">Our graduates from Full-Stack-Course start with an average salary of 40k p.a.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2016/11/19/22/52/coding-1841550_960_720.jpg">
                             <div class="carousel-caption d-md-block">
                                 <h5>DIGITALIZATION!</h5>
-                                <p class="text_carousel">Be competative in a digitalized world!</p>
+                                <p class="text_carousel">Be competitive in a digitalized world!</p>
                             </div>
                         </div>
                         <div class="carousel-item">

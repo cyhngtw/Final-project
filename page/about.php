@@ -6,7 +6,7 @@ include_once "../Components/navbar.php";
 // include_once "../Components/header.php";
 ?>
 
-<div class="container mt-4">
+<div class="container mt-5 pt-5">
     <!-- <div class="h4 mx-auto font-weight-bold mb-5" style="width: 350px;">
         <u>What could we do for you?</u>
     </div> -->
@@ -14,30 +14,29 @@ include_once "../Components/navbar.php";
 
     <div class="card-deck my-5">
         <div class="card">
-
             <div class="card-body">
                 <h5 class="card-title text-center"><i class="far fa-compass"></i> Career Guidance</h5>
-                <p class="card-text">Softskills are also very important to us. Not only do we want to teach our students programming languages, we also want to teach them the skills they need in their day-to-day work as highly skilled programmers.</p>
+                <p class="card-text">Softskills are also very important for us. Not only that we want to teach our students programming languages, we also want to teach them the skills which they need in their day-to-day work as a highly skilled programmer.</p>
 
             </div>
         </div>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center"><i class="fas fa-user-check"></i> Coding Assistence</h5>
-                <p class="card-text">Students study prepmaterials at home, then we provide on-site coding assistence while students bumps into bugging problem.</p>
+                <p class="card-text">Students study pre-materials at home. In class we provide on-site coding assistence while students jump into their bugging problems.</p>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center"><i class="fas fa-project-diagram"></i> Jobfair</h5>
-                <p class="card-text">We organize regularly job fair to help our students also companies who are searching for job developer</p>
+                <p class="card-text">We regularly organize job fairs to bring our students together with their future employer.</p>
 
             </div>
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center">
-     <span class=" text-secondary">Our</span><h4 class="brick w-90 border-bottom font-weight-bold">Team</h4>
+    <div class="row d-flex justify-content-center my-5">
+     <h4 class="text-secondary">Our</h4><h1 class="brick w-90 border-bottom font-weight-bold">Team</h1>
     </div>
 
     <div class="row justify-content-sm-between">

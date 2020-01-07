@@ -7,7 +7,6 @@ if (!isset($_SESSION['admin'])) {
 
 $title = "Adminpanel";
 include_once "../Components/head.php";
-include_once "../Components/navbar.php";
 include_once "../CrudController.php";
 $crudcontroller = new CrudController();
 $resultTags = $crudcontroller->readTags();
@@ -124,6 +123,23 @@ if(isset($_GET['id'])) {
 </div>
 <!-- Modal ends here -->
 
-<?php
-include_once "../Components/footer.php";
-?>
+<!-- JQuery<--->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--popper.js--->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<!--bootstrap.js--->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<!---JS--->
+<script type="text/javascript" src="../JS/crudEvent.js"></script>
+<script type="text/javascript" src="../JS/filterDropdown.js"></script>
+<script type="text/javascript" src="../JS/cart.js"></script>
+<script type="text/javascript" src="../JS/check_out_2.js"></script>
+<!-- <script type="text/javascript" src="../JS/cart.js"></script> -->
+</body>
+
+</html>

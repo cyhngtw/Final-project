@@ -2,7 +2,7 @@
 $title = "CourseOverview";
 include_once "../Components/head.php";
 include_once "../Components/navbar.php";
-include_once "../Components/header.php";
+// include_once "../Components/header.php";
 include_once "../Components/filterCheckboxes.php";
 
 include_once "../CrudController.php";
